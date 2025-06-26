@@ -15,5 +15,8 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build
-      - run: npm install -g gh-pages
-      - run: gh-pages -d dist -u "github-actions-bot <support+actions@github.com>"
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
