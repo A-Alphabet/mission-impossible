@@ -34,11 +34,11 @@ const VideoCall: React.FC<VideoCallProps> = ({ localStream, remoteStream, logs }
 
   return (
     <div className="video-call-container"
-      onTouchStart={e => {
+      onTouchStart={() => {
         if (localVideoRef.current) localVideoRef.current.controls = true;
         if (remoteVideoRef.current) remoteVideoRef.current.controls = true;
       }}
-      onTouchEnd={e => {
+      onTouchEnd={() => {
         setTimeout(() => {
           if (localVideoRef.current) localVideoRef.current.controls = false;
           if (remoteVideoRef.current) remoteVideoRef.current.controls = false;
@@ -49,7 +49,7 @@ const VideoCall: React.FC<VideoCallProps> = ({ localStream, remoteStream, logs }
       <video ref={remoteVideoRef} autoPlay playsInline className="video remote-video" />
       {logs && (
         <div className="dev-logs">
-          <h4 style={{margin:'8px 0'}}>Logs</h4>
+          <h4 className="logs-header">Logs</h4>
           <pre className="logs-pre">
             {logs.join('\n')}
           </pre>

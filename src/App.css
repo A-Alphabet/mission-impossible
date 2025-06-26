@@ -325,6 +325,10 @@
   word-break: break-all;
 }
 
+.logs-header {
+  margin: 8px 0;
+}
+
 .dev-sync-btn {
   margin-top: 8px;
   margin-bottom: 8px;
