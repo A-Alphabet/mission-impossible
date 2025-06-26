@@ -1,0 +1,12 @@
+{
+  "name": "project-mission-impossible-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
